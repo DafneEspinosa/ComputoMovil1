@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name" translatable="false">EspinosaFloresDafneJanetApp</string>
+    <string name="NombreTitulo">Ingresa tu nombre:</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Siguiente">verificar</string>
+    <string name="NumeroCuentaTitulo">Ingresa tu número de cuenta:</string>
+    <string name="NumeroCuenta">Número cuenta</string>
+    <string name="FechaNacimientoTitulo">Ingresa tu fecha de Nacimiento (dd/mm/aaaa):</string>
+    <string name="CorreoTitulo">Ingresa tu correo electrónico:</string>
+    <string name="Correo">Correo</string>
+    <string name="Titulo1">Descubre tu signo</string>
+    <string name="Titulo2">chino y signo zodiacal</string>
+    <string name="FechaNacimiento">dd/mm/aaaa</string>
+    <string name="ParaErrorValor">Ingresa el valor</string>
+    <string name="FinalFecha">Fecha de nacimiento</string>
+    <string name="ANIOS">TUS RESULTADOS SON:</string>
+    <string name="FINAl">Regresar al cuestionario</string>
+    <string name="SigActivity">VER RESULTADO</string>
+
+
+
+</resources>

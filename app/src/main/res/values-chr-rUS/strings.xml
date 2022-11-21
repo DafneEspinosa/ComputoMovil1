@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="NombreTitulo">Enter your name:</string>
+    <string name="Nombre">Name</string>
+    <string name="Siguiente">check</string>
+    <string name="NumeroCuentaTitulo">Enter your account number:</string>
+    <string name="NumeroCuenta">Account number</string>
+    <string name="FechaNacimientoTitulo">Enter your date of birth (dd/mm/yyyy)::</string>
+    <string name="CorreoTitulo">Enter your email:</string>
+    <string name="Correo">Email</string>
+    <string name="Titulo1">discover your sign</string>
+    <string name="Titulo2">chinese and zodiac sign</string>
+    <string name="FechaNacimiento">dd/mm/yyyy</string>
+    <string name="ParaErrorValor">Enter the value</string>
+    <string name="FinalFecha">Date of Birth</string>
+    <string name="ANIOS">YOUR RESULTS SON:</string>
+    <string name="FINAl">Return to the questionnaire</string>
+
+</resources>
