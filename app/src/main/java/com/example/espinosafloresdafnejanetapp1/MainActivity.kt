@@ -14,9 +14,7 @@ import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
 
-
     private lateinit var binding: ActivityMainBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,59 +23,10 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
     fun click(view: View) {
-        var CuantosAnios = binding.EdtFecha.text.toString()
-        var FechaNac = binding.EdtFecha.text.toString()
-        var NumCuent = binding.EdtCUENTA.text.toString().toInt()
-        var nombreper = binding.EdtNOMBRE.text.toString()
-        var correoElec = binding.EdtEMAIL.text.toString()
-
-        val intent = Intent(this, MainActivity2::class.java)
-        val parametros = Bundle()
-        var edad = cumpleanios(CuantosAnios)
-        var cuent = cuenta(NumCuent)
-        var Fnac = FNACIMIENTO(FechaNac)
-        var NamPer = NamePer(nombreper)
-        var CoElect = CElec(correoElec)
-        parametros.putString("edad", edad)
-        parametros.putInt("NumCuenta", cuent)
-        parametros.putString("Fecha", Fnac)
-        parametros.putString("nombre", NamPer)
-        parametros.putString("correoE", CoElect)
-
-        intent.putExtras(parametros)
-
-
-
-
-        if (binding.EdtNOMBRE.text.isNotEmpty()) {
-
-        } else {
-            Toast.makeText(
-                this@MainActivity,
-                resources.getString(R.string.ParaErrorValor),
-                Toast.LENGTH_SHORT
-            )
-            binding.EdtNOMBRE.error = getString(R.string.ParaErrorValor)
-        }
-
-        if (binding.EdtFecha.text.isNotEmpty()) {
-
-            //var edad = cumpleanios(CuantosAnios)
-            //binding.tvRESULTADO.text = edad
-        } else {
-            Toast.makeText(
-                this@MainActivity,
-                resources.getString(R.string.ParaErrorValor),
-                Toast.LENGTH_SHORT
-            )
-            binding.EdtFecha.error = getString(R.string.ParaErrorValor)
-        }
-
-
+        var i = 0
         if (binding.EdtCUENTA.text.isNotEmpty()) {
-
+            i+=1
         } else {
             Toast.makeText(
                 this@MainActivity,
@@ -86,9 +35,8 @@ class MainActivity : AppCompatActivity() {
             )
             binding.EdtCUENTA.error = getString(R.string.ParaErrorValor)
         }
-
         if (binding.EdtEMAIL.text.isNotEmpty()) {
-
+            i+=1
         } else {
             Toast.makeText(
                 this@MainActivity,
@@ -97,9 +45,52 @@ class MainActivity : AppCompatActivity() {
             )
             binding.EdtEMAIL.error = getString(R.string.ParaErrorValor)
         }
-        startActivity(intent)
+        if (binding.edtNEWFECHA.text.isNotEmpty()) {
+            i+=1
+        } else {
+            Toast.makeText(
+                this@MainActivity,
+                resources.getString(R.string.ParaErrorValor),
+                Toast.LENGTH_SHORT
+            )
+            binding.edtNEWFECHA.error = getString(R.string.ParaErrorValor)
+        }
+        if (binding.EdtNOMBRE.text.isNotEmpty()) {
+            i+=1
+        } else {
+            Toast.makeText(
+                this@MainActivity,
+                resources.getString(R.string.ParaErrorValor),
+                Toast.LENGTH_SHORT
+            )
+            binding.EdtNOMBRE.error = getString(R.string.ParaErrorValor)
+        }
+        if(binding.EdtNOMBRE.text.isNotEmpty() && binding.edtNEWFECHA.text.isNotEmpty() && binding.EdtEMAIL.text.isNotEmpty() && binding.EdtCUENTA.text.isNotEmpty()){
+            val CuantosAnios = binding.edtNEWFECHA.text.toString()
+            val FechaNac = binding.edtNEWFECHA.text.toString()
+            val NumCuent = binding.EdtCUENTA.text.toString().toInt()
+            val nombreper = binding.EdtNOMBRE.text.toString()
+            val correoElec = binding.EdtEMAIL.text.toString()
 
+            val edad = cumpleanios(CuantosAnios)
+            val cuent = cuenta(NumCuent)
+            val Fnac = FNACIMIENTO(FechaNac)
+            val NamPer = NamePer(nombreper)
+            val CoElect = CElec(correoElec)
+            val intent = Intent(this, MainActivity2::class.java)
+            val parametros = Bundle()
+            parametros.putString("edad", edad)
+            parametros.putInt("NumCuenta", cuent)
+            parametros.putString("Fecha", Fnac)
+            parametros.putString("nombre", NamPer)
+            parametros.putString("correoE", CoElect)
+
+            intent.putExtras(parametros)
+
+            startActivity(intent)
+        } else{}
     }
+
 
     fun cumpleanios(CuantosAnios: String): String {
         var fechaCumDate: Date = SimpleDateFormat("dd/MM/yyyy").parse(CuantosAnios)
@@ -122,12 +113,13 @@ class MainActivity : AppCompatActivity() {
         return FechaNac
     }
 
-    fun NamePer(nombreper: String): String {
+   fun NamePer(nombreper: String): String {
         return nombreper
     }
 
     fun CElec(correoElec: String): String {
         return correoElec
     }
+
 
 }
