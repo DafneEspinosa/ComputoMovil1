@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 
 public class MainActivity2 : AppCompatActivity() {
@@ -13,15 +14,25 @@ public class MainActivity2 : AppCompatActivity() {
         val bundle = intent.extras
 
         val edad = bundle?.getString("edad", "")
-        val NumCuenta = bundle?.getInt("NumCuenta", 0)
+        val NumCuenta = bundle?.getInt("NumCuenta", 0).toString()
         val Fecha = bundle?.getString("Fecha", "")
         val nombre = bundle?.getString("nombre", "")
         val correoE = bundle?.getString("correoE", "")
-        Toast.makeText(this, "El nombre es: $nombre", Toast.LENGTH_LONG).show()
-        Toast.makeText(this, "La fecha de nacimiento es: $Fecha", Toast.LENGTH_LONG).show()
-        Toast.makeText(this, "El número de cuenta es: $NumCuenta", Toast.LENGTH_LONG).show()
-        Toast.makeText(this, "El correo es: $correoE", Toast.LENGTH_LONG).show()
-        Toast.makeText(this, "La edad es: $edad", Toast.LENGTH_LONG).show()
+
+
+        val PARANOM = findViewById<TextView>(R.id.tvPARANOM)
+        PARANOM.setText(nombre)
+        val PARAFEC = findViewById<TextView>(R.id.tvPARAFEC)
+        PARAFEC.setText(Fecha)
+        val PARACUE = findViewById<TextView>(R.id.tvPARACUE)
+        PARACUE.setText(NumCuenta)
+        val PARCORR = findViewById<TextView>(R.id.tvPARACORR)
+        PARCORR.setText(correoE)
+        val PARAEDAD = findViewById<TextView>(R.id.tvPARAEDAD)
+        PARAEDAD.setText(edad)
+
+
+
     }
 
     fun click(view: View) {
@@ -29,5 +40,6 @@ public class MainActivity2 : AppCompatActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
     }
+
 
 }

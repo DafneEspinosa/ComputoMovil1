@@ -14,20 +14,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="181dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="172dp"
         android:layout_marginBottom="580dp"
         android:fontFamily="@font/aclonica"
         android:gravity="center_horizontal"
         android:text="@string/ANIOS"
         android:textColor="@color/Azultitulo"
-        android:textSize="34sp"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.343" />
+        app:layout_constraintVertical_bias="0.42" />
 
     <ImageView
         android:id="@+id/ivSORPRESA"
@@ -36,13 +36,14 @@
         android:layout_marginStart="107dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="107dp"
-        android:layout_marginBottom="424dp"
+        android:layout_marginBottom="24dp"
         android:foregroundGravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvANIOS"
+        app:layout_constraintVertical_bias="0.81"
         app:srcCompat="@drawable/sorpresa" />
 
     <Button
@@ -60,8 +61,120 @@
         android:text="@string/FINAl"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivSORPRESA"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvPARANOM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="27dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center|center_horizontal"
+        android:hint="@string/Nombre"
+        android:textColor="@color/NegroInformacion"
+        android:textColorHint="@color/VerdeFormulario"
+        app:layout_constraintBottom_toTopOf="@+id/tvPARAFEC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvANIOS"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+    <TextView
+        android:id="@+id/tvPARAFEC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center_horizontal"
+        android:hint="@string/FechaNacimiento"
+        android:textColor="@color/NegroInformacion"
+        android:textColorHint="@color/VerdeFormulario"
+        app:layout_constraintBottom_toTopOf="@+id/tvPARACUE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPARANOM" />
+
+    <TextView
+        android:id="@+id/tvPARACUE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center_horizontal"
+        android:hint="@string/NumeroCuenta"
+        android:textColor="@color/NegroInformacion"
+        android:textColorHint="@color/VerdeFormulario"
+        app:layout_constraintBottom_toTopOf="@+id/tvPARACORR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPARAFEC" />
+
+    <TextView
+        android:id="@+id/tvPARACORR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center_horizontal"
+        android:hint="@string/Correo"
+        android:textColor="@color/NegroInformacion"
+        android:textColorHint="@color/VerdeFormulario"
+        app:layout_constraintBottom_toTopOf="@+id/tvPARAEDAD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPARACUE" />
+
+    <TextView
+        android:id="@+id/tvPARAEDAD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="142dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center_horizontal|left"
+        android:hint="@string/EDAD"
+        android:textColor="@color/NegroInformacion"
+        android:textColorHint="@color/VerdeFormulario"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivSORPRESA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/tvANIOS"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="140dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center_horizontal"
+        android:text="@string/EDAD"
+        android:textColor="@color/NegroInformacion"
+        app:layout_constraintBottom_toTopOf="@+id/ivSORPRESA"
+        app:layout_constraintEnd_toStartOf="@+id/tvPARAEDAD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPARACORR" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

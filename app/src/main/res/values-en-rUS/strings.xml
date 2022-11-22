@@ -16,5 +16,7 @@
     <string name="FinalFecha">Date of Birth</string>
     <string name="ANIOS">YOUR RESULTS SON:</string>
     <string name="FINAl">Return to the questionnaire</string>
+    <string name="EDAD">Age (in year)</string>
+
 
 </resources>

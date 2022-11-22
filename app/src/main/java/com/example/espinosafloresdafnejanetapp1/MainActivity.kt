@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             binding.edtNEWFECHA.error = getString(R.string.ParaErrorValor)
         }
         if (binding.EdtNOMBRE.text.isNotEmpty()) {
-            i+=1
+
         } else {
             Toast.makeText(
                 this@MainActivity,
@@ -65,6 +65,9 @@ class MainActivity : AppCompatActivity() {
             )
             binding.EdtNOMBRE.error = getString(R.string.ParaErrorValor)
         }
+
+
+
         if(binding.EdtNOMBRE.text.isNotEmpty() && binding.edtNEWFECHA.text.isNotEmpty() && binding.EdtEMAIL.text.isNotEmpty() && binding.EdtCUENTA.text.isNotEmpty()){
             val CuantosAnios = binding.edtNEWFECHA.text.toString()
             val FechaNac = binding.edtNEWFECHA.text.toString()
