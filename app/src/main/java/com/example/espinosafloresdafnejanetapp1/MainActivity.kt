@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
         if(binding.EdtNOMBRE.text.isNotEmpty() && binding.edtNEWFECHA.text.isNotEmpty() && binding.EdtEMAIL.text.isNotEmpty() && binding.EdtCUENTA.text.isNotEmpty()){
             val CuantosAnios = binding.edtNEWFECHA.text.toString()
             val FechaNac = binding.edtNEWFECHA.text.toString()
